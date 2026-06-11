@@ -32,6 +32,7 @@ class Install {
         }
 
         $this->createTables();
+        $this->migrateQuoteWorkflow();
         $this->populateYearsTable();
         $this->insertCarDataFromCsv();
         $this->populateTypesTable();
@@ -47,6 +48,11 @@ class Install {
         $this->createQuotesTable();
         $this->createQuotesDataTable();
         $this->createUsersTable();
+    }
+
+    private function migrateQuoteWorkflow() {
+        require_once CI_INCLUDES . '/helpers/QuoteStatus.php';
+        CI_Quote_Status::migrate_legacy_rows( $this->wpdb, $this->quotes_table );
     }
 
     private function createYearsTable() {
@@ -138,6 +144,9 @@ class Install {
             images LONGTEXT NULL,
             title_images LONGTEXT NULL,
             car_images LONGTEXT NULL,
+            images_status VARCHAR(20) DEFAULT 'none' NOT NULL,
+            title_review VARCHAR(20) DEFAULT 'none' NOT NULL,
+            car_review VARCHAR(20) DEFAULT 'none' NOT NULL,
             is_deleted BOOLEAN DEFAULT 0 NOT NULL,
             PRIMARY KEY  (id)
         ) $this->charset_collate;";  

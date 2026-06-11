@@ -124,12 +124,16 @@ class AjaxCallbacks {
             $this->wpdb->update(
                 $this->quotes_table,
                 array(
-                    'images'       => json_encode( $vehicle_images ),
-                    'car_images'   => json_encode( $vehicle_images ),
-                    'title_images' => json_encode( $title_images ),
+                    'images'        => json_encode( $vehicle_images ),
+                    'car_images'    => json_encode( $vehicle_images ),
+                    'title_images'  => json_encode( $title_images ),
+                    'images_status' => CI_Quote_Status::IMAGES_PENDING,
+                    'title_review'  => CI_Quote_Status::REVIEW_PENDING,
+                    'car_review'    => CI_Quote_Status::REVIEW_PENDING,
+                    'status'        => CI_Quote_Status::OFFERED,
                 ),
                 array( 'id' => $quote_id ),
-                array( '%s', '%s', '%s' ),
+                array( '%s', '%s', '%s', '%s', '%s', '%s', '%d' ),
                 array( '%d' )
             );
         }
@@ -445,8 +449,13 @@ class AjaxCallbacks {
         if((isset($otherArray['offer']) && !empty($otherArray['offer'])))
         {
             $query = $this->wpdb->prepare("SELECT * FROM $this->quotes_table WHERE id = %d", $otherArray['offer']);
-            $result = $this->wpdb->get_row($query, ARRAY_A);
+            $result = $this->wpdb->get_row($query);
             if ($result) {
+                if ( ! CI_Quote_Status::can_accept_offer( $result ) ) {
+                    wp_send_json_error( 'Images must be approved by admin before you can accept this offer.' );
+                    exit;
+                }
+                $result = (array) $result;
                 $posted_data['transactionID'] = $result['transaction_id'];
                 $pro_quote = new ProQuote();
                 $request = $pro_quote->generateAssignmentRequest($posted_data);
@@ -468,7 +477,7 @@ class AjaxCallbacks {
                 {
                     $this->wpdb->update(
                         $this->quotes_table,
-                        array('data_assignment' => json_encode($request), 'status' => 2),
+                        array( 'data_assignment' => json_encode( $request ), 'status' => CI_Quote_Status::ACCEPTED ),
                         array('id' => $otherArray['offer']),
                         array('%s'),
                         array('%d')
@@ -513,7 +522,7 @@ class AjaxCallbacks {
                 {
                     $this->wpdb->update(
                         $this->quotes_table,
-                        array('status' => 3),
+                        array( 'status' => CI_Quote_Status::CANCELED ),
                         array('id' => $posted_data['offer']),
                         array('%s'),
                         array('%d')
@@ -596,20 +605,41 @@ class AjaxCallbacks {
                     echo 'Failed to upload image: ' . $file['name'];
                 }
             }
-            if($posted_data['type'] == "title")
-            {
-                $nvp = array('status' => 4, 'title_images' => json_encode($uploaded_files));
+            $quote_row = $this->wpdb->get_row(
+                $this->wpdb->prepare( "SELECT * FROM $this->quotes_table WHERE id = %d", $posted_data['offer'] )
+            );
+
+            if ( ! $quote_row || (int) $quote_row->status !== CI_Quote_Status::OFFERED ) {
+                wp_send_json_error( 'This offer is no longer available for image upload.' );
+                exit;
             }
-            else
-            {
-                $nvp = array('status' => 4, 'car_images' => json_encode($uploaded_files));
+
+            $title_review = $quote_row->title_review ?: CI_Quote_Status::REVIEW_NONE;
+            $car_review   = $quote_row->car_review ?: CI_Quote_Status::REVIEW_NONE;
+
+            if ( $posted_data['type'] == 'title' ) {
+                $nvp = array(
+                    'title_images' => json_encode( $uploaded_files ),
+                    'title_review' => CI_Quote_Status::REVIEW_PENDING,
+                );
+                $title_review = CI_Quote_Status::REVIEW_PENDING;
+            } else {
+                $nvp = array(
+                    'car_images' => json_encode( $uploaded_files ),
+                    'car_review' => CI_Quote_Status::REVIEW_PENDING,
+                );
+                $car_review = CI_Quote_Status::REVIEW_PENDING;
             }
+
+            $nvp['status']        = CI_Quote_Status::OFFERED;
+            $nvp['images_status'] = CI_Quote_Status::sync_images_status( $title_review, $car_review );
+
             $this->wpdb->update(
                 $this->quotes_table,
                 $nvp,
-                array('id' => $posted_data['offer']),
-                array('%s'),
-                array('%d')
+                array( 'id' => $posted_data['offer'] ),
+                array( '%s', '%s', '%d', '%s' ),
+                array( '%d' )
             );
             if (!empty($uploaded_files)) {
                 wp_send_json_success(array('message' => 'Images Uploaded', 'offer' => $posted_data, 'redirect' => home_url()."/offers-home"));
@@ -627,43 +657,50 @@ class AjaxCallbacks {
             exit;
         }
         $posted_data = $_POST;
-        if((isset($posted_data['offer']) && !empty($posted_data['offer'])) && (isset($posted_data['approve']) && !empty($posted_data['approve'])))
-        {
-            if($posted_data['approve'] == "true")
-            {
-                $this->wpdb->update(
-                    $this->quotes_table,
-                    array('status' => 5),
-                    array('id' => $posted_data['offer']),
-                    array('%s'),
-                    array('%d')
-                );
-                $message = "Title Approved";
+        if ( ( isset( $posted_data['offer'] ) && ! empty( $posted_data['offer'] ) ) && ( isset( $posted_data['approve'] ) && $posted_data['approve'] !== '' ) ) {
+            $quote_row = $this->wpdb->get_row(
+                $this->wpdb->prepare( "SELECT * FROM $this->quotes_table WHERE id = %d", $posted_data['offer'] )
+            );
+
+            if ( ! $quote_row || (int) $quote_row->status !== CI_Quote_Status::OFFERED ) {
+                wp_send_json_error( 'Image review is only available for offered quotes.' );
+                exit;
             }
-            else
-            {
-                if($posted_data['type'] == 'title')
-                {
-                    $nvp = array('status' => 6);
-                    $message = "Title Disapproved";
-                }
-                else
-                {
-                    $nvp = array('status' => 7);
-                    $message = "Car Images Disapproved.";
-                }
-                $this->wpdb->update(
-                    $this->quotes_table,
-                    $nvp,
-                    array('id' => $posted_data['offer']),
-                    array('%s'),
-                    array('%d')
-                ); 
+
+            $title_review = $quote_row->title_review ?: CI_Quote_Status::REVIEW_NONE;
+            $car_review   = $quote_row->car_review ?: CI_Quote_Status::REVIEW_NONE;
+            $is_approve   = $posted_data['approve'] === 'true';
+            $type         = isset( $posted_data['type'] ) ? $posted_data['type'] : 'title';
+
+            if ( $type === 'title' ) {
+                $title_review = $is_approve ? CI_Quote_Status::REVIEW_APPROVED : CI_Quote_Status::REVIEW_REJECTED;
+                $message      = $is_approve ? 'Title images approved.' : 'Title images disapproved.';
+            } else {
+                $car_review = $is_approve ? CI_Quote_Status::REVIEW_APPROVED : CI_Quote_Status::REVIEW_REJECTED;
+                $message    = $is_approve ? 'Vehicle images approved.' : 'Vehicle images disapproved.';
             }
-            wp_send_json_success($message);
-        }
-        else
-        {
+
+            $images_status = CI_Quote_Status::sync_images_status( $title_review, $car_review );
+
+            $this->wpdb->update(
+                $this->quotes_table,
+                array(
+                    'status'        => CI_Quote_Status::OFFERED,
+                    'images_status' => $images_status,
+                    'title_review'  => $title_review,
+                    'car_review'    => $car_review,
+                ),
+                array( 'id' => $posted_data['offer'] ),
+                array( '%d', '%s', '%s', '%s' ), // status, images_status, title_review, car_review
+                array( '%d' )
+            );
+
+            if ( $images_status === CI_Quote_Status::IMAGES_APPROVED ) {
+                $message .= ' Customer can now accept the offer.';
+            }
+
+            wp_send_json_success( $message );
+        } else {
             wp_send_json_error( 'Invalid Data.' );
         }
     }

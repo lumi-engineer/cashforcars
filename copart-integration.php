@@ -82,6 +82,7 @@ final class CopartIntegration {
 
     public function includes() {
         require_once CI_INCLUDES . '/helpers/ImageUrl.php';
+        require_once CI_INCLUDES . '/helpers/QuoteStatus.php';
 
         if ( $this->is_request( 'frontend' ) ) {
             require_once CI_INCLUDES . '/Assets.php';

@@ -182,28 +182,7 @@ foreach ($results as $row) {
         echo '<tr>';
         echo '<td>' . $request['vehicleInformation']['year'] . " " . $request['vehicleInformation']['makeCode'] . " " . $request['vehicleInformation']['model'] . '</td>';
         echo '<td>$' . $row->pro_quote . '</td>';
-        echo '<td>';
-        if ($row->status == 1) {
-            echo '<span class="badge bg-info text-dark">Offered</span>';
-        } elseif ($row->status == 2) {
-            echo '
-            <span class="badge bg-success">Accepted</span>';
-        } elseif ($row->status == 3) {
-            echo '<span class="badge bg-danger">Canceled</span';
-        }
-        elseif ($row->status == 4) {
-            echo '<span class="badge bg-warning">In Review</span';
-        }
-        elseif ($row->status == 5) {
-            echo '<span class="badge bg-success">Title Images Approved</span';
-        }
-        elseif ($row->status == 6) {
-            echo '<span class="badge bg-danger">Title Images Disapproved - Submit again</span';
-        }
-        elseif ($row->status == 7) {
-            echo '<span class="badge bg-danger">Car Images Disapproved - Submit again</span';
-        }
-        echo '</td>';
+        echo '<td>' . CI_Quote_Status::get_status_badge_html( $row ) . '</td>';
         echo '<td>';
         echo '<a href="?offer=' . $row->id . '" class="btn btn-primary mr-1"><i class="far fa-eye"></i></a>';
         echo '</td>';
@@ -233,6 +212,8 @@ else
 {
   $query = $wpdb->prepare("SELECT $quotes_table.*, $quotes_data_table.pro_quote FROM $quotes_table JOIN $quotes_data_table ON $quotes_table.id = $quotes_data_table.qid WHERE $quotes_table.email = %s  and $quotes_table.id  = $offerID",$_SESSION['ci_email']);
   $result = $wpdb->get_row($query);
+  $result = CI_Quote_Status::normalize_row( $result );
+  $quote_status = (int) $result->status;
   $request = json_decode($result->data_proquote,1);
   if($result->email != $_SESSION['ci_email'])
   {
@@ -248,9 +229,8 @@ else
     $result_vehicle_type = $wpdb->get_row($query_vehicle_type);
   }
   $disabled = '';
-  if(isset($result->status) && ($result->status == 2 || $result->status == 3))
-  {
-    $disabled = "disabled";
+  if ( $quote_status === CI_Quote_Status::ACCEPTED || $quote_status === CI_Quote_Status::CANCELED ) {
+    $disabled = 'disabled';
   }
 ?>
 <div class="container mt-4">
@@ -278,40 +258,56 @@ else
           <p class="loading-text">Please wait ...</p>
       </div>
       <?php
-    if(isset($result->status) && !empty($result->status) && ($result->status == 1 ||$result->status == 4 || $result->status == 6 || $result->status == 7 ))
-    {
-?>              <div class="container">
-                <!-- Add a hidden container for full-screen preview -->
-                <!-- Hidden modal dialog for image preview -->
+    if ( CI_Quote_Status::customer_waiting_review( $result ) ) {
+?>
+              <div class="container">
                 <div class="row card p-5">
-                <p class="mb-5">Please select the title and car images so that we can review so that you accept our offer.</p>
+                <p class="mb-5">Your images have been submitted and are being reviewed. You will be able to accept the offer once admin approves your title and vehicle photos.</p>
+                    <?php ci_render_image_previews( $result->title_images ); ?>
+                    <?php ci_render_image_previews( $result->car_images, 'image-preview-container mt-5' ); ?>
+                </div>
+              </div>
+<?php
+    } elseif ( CI_Quote_Status::customer_show_title_upload( $result ) || CI_Quote_Status::customer_show_car_upload( $result ) ) {
+?>
+              <div class="container">
+                <div class="row card p-5">
+                <p class="mb-5">Please upload your title image and vehicle photos. Our team will review them before you can accept the offer.</p>
 
+                    <?php if ( CI_Quote_Status::customer_show_title_upload( $result ) ) { ?>
                     <div class="col-md-12">
                         <div class="form-group">
                             <label class="control-label mb-5">Upload Title Image</label><br>
                             <input type="file" id="images" class="mb-5" name="custom_images[]" accept="image/*">
-                            <button class="submit_images" data-id ="title">      Upload Image  </button>                
+                            <button class="submit_images" data-id ="title">Upload Image</button>
                         </div>
                     </div>
+                    <?php } ?>
                     <?php ci_render_image_previews( $result->title_images ); ?>
 
+                    <?php if ( CI_Quote_Status::customer_show_car_upload( $result ) ) { ?>
                     <div class="col-md-12">
                         <div class="form-group">
                             <label class="control-label mb-5">Upload Vehicle Photos</label><br>
                             <input type="file" id="car_images" name="car_images[]" accept="image/*" multiple>
-                            <button class="submit_images" data-id ="car">      Upload Images  </button>                
+                            <button class="submit_images" data-id ="car">Upload Images</button>
                         </div>
                     </div>
+                    <?php } ?>
                     <?php ci_render_image_previews( $result->car_images, 'image-preview-container mt-5' ); ?>
                 </div>
-                    </div>
-
+              </div>
 <?php
-    }
-else{
+    } elseif ( $quote_status === CI_Quote_Status::CANCELED ) {
+?>
+        <div class="row card p-5">
+            <p class="mb-0">This offer has been canceled.</p>
+        </div>
+<?php
+    } else {
 ?>
         <div class="panel panel-primary setup-content card p-5" id="step-1">
-        <p class="mb-5 text-center">Your title has been reviewed you can accept our offer now.</p>
+        <p class="mb-5 text-center"><?php echo CI_Quote_Status::can_accept_offer( $result ) ? 'Your images have been approved. You can accept our offer now.' : 'Review your offer details below.'; ?></p>
             <div class="panel-heading">
                  <h3 class="panel-title">Vehicle</h3>
             </div>
@@ -381,7 +377,7 @@ else{
             <div class="mt-5">
             <button class="btn btn-primary nextBtn float-right ci-btn" type="button" style="float: right;">Next</button>
             <?php
-              if(isset($result->status) && ($result->status == 2)){
+              if ( $quote_status === CI_Quote_Status::ACCEPTED ) {
             ?>
               <button id="cancelBtn" class="btn btn-danger float-left" type="button" >Cancel Offer</button>
             <?php

@@ -4,8 +4,8 @@ ob_start();
 Template Name: Copart Backend Home Page
 Description: A custom template for the Copart Backend Home Page.
 */
-$offerID = $_GET['offer'];
-$statusFilter = isset($_GET['status']) ? intval($_GET['status']) :''; // Get the status filter from URL
+$offerID = isset( $_GET['offer'] ) ? absint( $_GET['offer'] ) : 0;
+$workflowFilter = isset( $_GET['workflow'] ) ? sanitize_text_field( $_GET['workflow'] ) : 'all';
 wp_enqueue_script( 'select2-js' );
 wp_enqueue_script( 'ci-swal-js' );
 wp_localize_script( 'script-backend-js', 'ajax_object', array(
@@ -142,48 +142,55 @@ $itemsPerPage = 10;
 $offset = ($currentPage - 1) * $itemsPerPage;
 
 
-    // If status filter is applied, modify the query accordingly
-    $statusQuery = $statusFilter !== '' ? $wpdb->prepare("AND $quotes_table.status = %d", $statusFilter) : '';
-    // If status filter is applied, modify the query accordingly
-    if ($statusFilter !== '') {
-        $totalCount = $wpdb->get_var(
-            $wpdb->prepare("SELECT COUNT(*) FROM $quotes_table 
-                            JOIN $quotes_data_table ON $quotes_table.id = $quotes_data_table.qid 
-                            WHERE $quotes_table.status = %d AND $quotes_data_table.pro_quote IS NOT NULL AND $quotes_data_table.pro_quote != ''", 
-                           $statusFilter)
-        );
-        $results = $wpdb->get_results(
-            $wpdb->prepare(
-                "SELECT $quotes_table.*, $quotes_data_table.pro_quote 
-                 FROM $quotes_table 
-                 JOIN $quotes_data_table ON $quotes_table.id = $quotes_data_table.qid 
-                 WHERE $quotes_table.status = %d 
-                 AND $quotes_data_table.pro_quote IS NOT NULL 
-                 AND $quotes_data_table.pro_quote != '' 
-                 ORDER BY $quotes_table.id DESC 
-                 LIMIT %d, %d", 
-                 $statusFilter, $offset, $itemsPerPage
-            )
-        );
-    } else {
-        $totalCount = $wpdb->get_var(
-            "SELECT COUNT(*) FROM $quotes_table 
-             JOIN $quotes_data_table ON $quotes_table.id = $quotes_data_table.qid 
-             WHERE $quotes_data_table.pro_quote IS NOT NULL AND $quotes_data_table.pro_quote != ''"
-        );
-        $results = $wpdb->get_results(
-            $wpdb->prepare(
-                "SELECT $quotes_table.*, $quotes_data_table.pro_quote 
-                 FROM $quotes_table 
-                 JOIN $quotes_data_table ON $quotes_table.id = $quotes_data_table.qid 
-                 WHERE $quotes_data_table.pro_quote IS NOT NULL 
-                 AND $quotes_data_table.pro_quote != '' 
-                 ORDER BY $quotes_table.id DESC 
-                 LIMIT %d, %d", 
-                 $offset, $itemsPerPage
-            )
-        );
+    $where_parts = array(
+        "$quotes_data_table.pro_quote IS NOT NULL",
+        "$quotes_data_table.pro_quote != ''",
+    );
+
+    switch ( $workflowFilter ) {
+        case 'offered':
+            $where_parts[] = "$quotes_table.status = " . CI_Quote_Status::OFFERED;
+            break;
+        case 'offered_pending':
+            $where_parts[] = "$quotes_table.status = " . CI_Quote_Status::OFFERED;
+            $where_parts[] = "$quotes_table.images_status = 'pending'";
+            break;
+        case 'offered_approved':
+            $where_parts[] = "$quotes_table.status = " . CI_Quote_Status::OFFERED;
+            $where_parts[] = "$quotes_table.images_status = 'approved'";
+            break;
+        case 'offered_rejected':
+            $where_parts[] = "$quotes_table.status = " . CI_Quote_Status::OFFERED;
+            $where_parts[] = "$quotes_table.images_status = 'rejected'";
+            break;
+        case 'accepted':
+            $where_parts[] = "$quotes_table.status = " . CI_Quote_Status::ACCEPTED;
+            break;
+        case 'canceled':
+            $where_parts[] = "$quotes_table.status = " . CI_Quote_Status::CANCELED;
+            break;
     }
+
+    $where_sql = implode( ' AND ', $where_parts );
+
+    $totalCount = $wpdb->get_var(
+        "SELECT COUNT(*) FROM $quotes_table
+         JOIN $quotes_data_table ON $quotes_table.id = $quotes_data_table.qid
+         WHERE $where_sql"
+    );
+
+    $results = $wpdb->get_results(
+        $wpdb->prepare(
+            "SELECT $quotes_table.*, $quotes_data_table.pro_quote
+             FROM $quotes_table
+             JOIN $quotes_data_table ON $quotes_table.id = $quotes_data_table.qid
+             WHERE $where_sql
+             ORDER BY $quotes_table.id DESC
+             LIMIT %d, %d",
+            $offset,
+            $itemsPerPage
+        )
+    );
     
     echo '<div class="container mt-4">';
     echo '<div class="card p-5" style="min-width:100%">';
@@ -192,13 +199,14 @@ $offset = ($currentPage - 1) * $itemsPerPage;
     echo '<div class="col-md-4">';
     echo '<form method="get" action="' . esc_url(admin_url('admin.php')) . '">';
     echo '<input type="hidden" name="page" value="copart-integration">'; // Add the page parameter
-    echo '<select name="status" class="form-select" onchange="this.form.submit()">';
-    echo '<option value="1"' . selected($statusFilter, 1, false) . '>Offered</option>';
-    echo '<option value="2"' . selected($statusFilter, 2, false) . '>Accepted</option>';
-    echo '<option value="3"' . selected($statusFilter, 3, false) . '>Canceled</option>';
-    echo '<option value="4"' . selected($statusFilter, 4, false) . '>Waiting For Review</option>';
-    echo '<option value="5"' . selected($statusFilter, 5, false) . '>Title Images Approved</option>';
-    echo '<option value="6"' . selected($statusFilter, 6, false) . '>Title Images Disapproved</option>';
+    echo '<select name="workflow" class="form-select" onchange="this.form.submit()">';
+    echo '<option value="all"' . selected( $workflowFilter, 'all', false ) . '>All Offers</option>';
+    echo '<option value="offered"' . selected( $workflowFilter, 'offered', false ) . '>Offered</option>';
+    echo '<option value="offered_pending"' . selected( $workflowFilter, 'offered_pending', false ) . '>Offered - Pending Image Review</option>';
+    echo '<option value="offered_approved"' . selected( $workflowFilter, 'offered_approved', false ) . '>Offered - Images Approved</option>';
+    echo '<option value="offered_rejected"' . selected( $workflowFilter, 'offered_rejected', false ) . '>Offered - Images Rejected</option>';
+    echo '<option value="accepted"' . selected( $workflowFilter, 'accepted', false ) . '>Accepted</option>';
+    echo '<option value="canceled"' . selected( $workflowFilter, 'canceled', false ) . '>Canceled</option>';
     echo '</select>';
     echo '</form>';
     
@@ -226,26 +234,8 @@ foreach ($results as $row) {
         echo '<tr>';
         echo '<td>' . $request['vehicleInformation']['year'] . " " . $request['vehicleInformation']['makeCode'] . " " . $request['vehicleInformation']['model'] . '</td>';
         echo '<td>$' . $row->pro_quote . '</td>';
-        echo '<td>';
-        if ($row->status == 1) {
-            echo '<span class="badge bg-info text-dark">Offered</span>';
-        } elseif ($row->status == 2) {
-            echo '
-            <span class="badge bg-success">Accepted</span>';
-        } elseif ($row->status == 3) {
-            echo '<span class="badge bg-danger">Canceled</span';
-        }
-        elseif ($row->status == 4) {
-            echo '<span class="badge bg-warning">Waiting For Review</span';
-        }
-        elseif ($row->status == 5) {
-            echo '<span class="badge bg-success">Title Images Approved</span';
-        }
-        elseif ($row->status == 6) {
-            echo '<span class="badge bg-danger">Title Images Disapproved - Submit again</span';
-        }
-        echo '</td>';
-        echo '<td>' . date('Y-m-d H:i:s', $result->transaction_id) . '</td>';
+        echo '<td>' . CI_Quote_Status::get_status_badge_html( $row ) . '</td>';
+        echo '<td>' . date( 'Y-m-d H:i:s', $row->transaction_id ) . '</td>';
         echo '<td>';
         echo '<a href="?page=copart-integration&offer=' . $row->id . '" class="btn btn-primary mr-1">View</a>';
         echo '</td>';
@@ -301,11 +291,10 @@ else
     
   $query = $wpdb->prepare("SELECT $quotes_table.*, $quotes_data_table.pro_quote FROM $quotes_table JOIN $quotes_data_table ON $quotes_table.id = $quotes_data_table.qid  and $quotes_table.id  = $offerID");
   $result = $wpdb->get_row($query);
-  $request = json_decode($result->data_proquote,1);
-  $request_assignment = json_decode($result->data_assignment,1);
+  $result = CI_Quote_Status::normalize_row( $result );
   $request = json_decode($result->data_proquote, true);
   $request_assignment = json_decode($result->data_assignment, true);
-    $quote_status = $result->status;
+  $quote_status = (int) $result->status;
   // Extract email, phone, and address if status is 1
   $email = $result->email;
   $address = isset($request['vehicleLocationSite']['locationName']) ? $request['vehicleLocationSite']['locationName'] . ', ' . $request['vehicleLocationSite']['address']['contact']['postalCode'] : 'Address not available';
@@ -319,16 +308,15 @@ else
     $result_vehicle_type = $wpdb->get_row($query_vehicle_type);
   }
   $disabled = '';
-  if(isset($result->status) && ($result->status == 2 || $result->status == 3))
-  {
-    $disabled = "disabled";
+  if ( $quote_status === CI_Quote_Status::ACCEPTED || $quote_status === CI_Quote_Status::CANCELED ) {
+    $disabled = 'disabled';
   }
 ?>
 <div class="container mt-4">
     <div class="row card p-5" style="min-width: 100%;">
         <h5 class="card-title mb-5"> Information</h5>
         
-        <?php if($quote_status == 2) {?>
+        <?php if ( $quote_status === CI_Quote_Status::ACCEPTED ) { ?>
             <h5 class="card-title mb-5">Vehicle and Assignment Information</h5>
         
         <!-- Vehicle Information -->
@@ -423,6 +411,7 @@ else
     echo isset($result->transaction_id) ? date('Y-m-d H:i:s', $result->transaction_id) : 'Not available'; 
     ?>
 </p>
+            <p><strong>Image Review:</strong> <?php echo esc_html( CI_Quote_Status::get_images_status_label( $result->images_status ) ); ?></p>
             <?php } ?>
 
         <a href="?page=copart-integration" class="btn btn-primary mt-3">Back</a>
@@ -435,22 +424,25 @@ else
           </div>
           <p class="loading-text">Please wait ...</p>
       </div>
-      <?php if(in_array($quote_status, [4,5,6,2])) {?>
+      <?php if ( CI_Quote_Status::admin_can_review_images( $result ) ) { ?>
         <div class="row card p-5" style="min-width: 100%;">
-                <h5 class="card-title mb-5">Please approve or disapprove titles.</h5>
+                <h5 class="card-title mb-5">Review title image (Offered)</h5>
+                <p><strong>Current title review:</strong> <?php echo esc_html( ucfirst( $result->title_review ) ); ?></p>
                     <?php ci_render_image_previews( $result->title_images ); ?>
                     <div class="flex">
-                    <button id="approveBtn"  style="width: min-content;" class="btn btn-danger float-right mt-5 actionBtn" type="button" data-type="title" action="false">Disapprove</button>
-                    <button id="disapproveBtn"   style="width: min-content;float:right" class="btn btn-primary float-left mt-5 actionBtn"  data-type="title" type="button" action="true">Approve</button>
+                    <button style="width: min-content;" class="btn btn-danger float-right mt-5 actionBtn" type="button" data-type="title" action="false">Disapprove Title</button>
+                    <button style="width: min-content;float:right" class="btn btn-primary float-left mt-5 actionBtn" data-type="title" type="button" action="true">Approve Title</button>
                     </div>
                 </div>
                 <div class="row card p-5 mt-5" style="min-width: 100%;">
-                <h5 class="card-title mb-5">Please approve or disapprove car</h5>
+                <h5 class="card-title mb-5">Review vehicle photos (Offered)</h5>
+                <p><strong>Current vehicle review:</strong> <?php echo esc_html( ucfirst( $result->car_review ) ); ?></p>
                     <?php ci_render_image_previews( $result->car_images ); ?>
                     <div class="flex">
-                    <button id="approveBtn"  style="width: min-content;" class="btn btn-danger float-right mt-5 actionBtn" type="button" data-type="car" action="false">Disapprove</button>
-                    <button id="disapproveBtn"   style="width: min-content;float:right" class="btn btn-primary float-left mt-5 actionBtn" type="button" data-type="car" action="true">Approve</button>
+                    <button style="width: min-content;" class="btn btn-danger float-right mt-5 actionBtn" type="button" data-type="car" action="false">Disapprove Vehicle Photos</button>
+                    <button style="width: min-content;float:right" class="btn btn-primary float-left mt-5 actionBtn" type="button" data-type="car" action="true">Approve Vehicle Photos</button>
                     </div>
+                    <p class="mt-4"><em>Customer can accept the offer only after both title and vehicle photos are approved.</em></p>
                     </div>
 </div>
 <?php } ?>
