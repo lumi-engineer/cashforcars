@@ -1,0 +1,486 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f1f1;
+}
+
+#canvas {
+  background-color: #ffffff;
+  margin: 100px auto;
+  font-family: Raleway;
+  width: 70%;
+  min-width: 300px;
+}
+
+h1 {
+  text-align: center;  
+}
+
+input {
+  padding: 10px;
+  width: 100%;
+  font-size: 17px;
+  font-family: Raleway;
+  border: 1px solid #aaaaaa;
+}
+
+/* Mark input boxes that gets an error on validation: */
+input.invalid {
+  background-color: #ffdddd;
+}
+
+/* Hide all steps by default: */
+.tab {
+  display: none;
+}
+
+button {
+  background-color: #04AA6D;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 17px;
+  font-family: Raleway;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+#prevBtn {
+  background-color: #bbbbbb;
+}
+
+/* Make circles that indicate the steps of the form: */
+.step {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbbbbb;
+  border: none;  
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+.step.active {
+  opacity: 1;
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+  background-color: #04AA6D;
+}
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('../images/searchicon.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+}
+
+.ui-listbox-item {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#year li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block
+}
+
+#year li a:hover:not(.header) {
+  background-color: #eee;
+}
+.list-group-item:hover, .no-touch a.list-group-item.key-hover, .no-touch a.list-group-item:focus {
+  background-color:#ecf8fc;
+  text-decoration: none;
+  color: #3a4351;
+}
+.loading{
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  height: 200px; /* Set the container height to viewport height for vertical alignment */
+}
+.search{
+  height: 400px;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+.header{
+  font-size: 18px;
+    padding: 15px;
+    color: #fff;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: auto;
+  background-color: #22395b;
+  border-radius: 6px 6px 0 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.flex-column-center {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+}
+.right {
+  float: right;
+}
+.title-container {
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  align-items: center;
+  border-bottom: 1px solid #eeeeee;
+}
+.title-searchbar{
+  position: relative;
+  -webkit-box-flex: 1;
+  flex-grow: 1;
+  margin: 16px 20px;
+}
+
+ .ui-listbox-list {
+  background-color: #fff;
+}
+ .ui-listbox-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+ .ui-listbox-list .ui-listbox-item {
+  margin: 0;
+  padding: 0.429em 0.857em;
+  border: 0;
+  color: #666;
+  background-color: transparent;
+  border-radius: 0;
+}
+
+ .ui-listbox-item {
+  padding: 0!important;
+  margin-bottom: 0!important;
+}
+.ui-listbox-item {
+  border: 0;
+  cursor: pointer;
+  font-weight: 400;
+}
+.ui-listbox-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.list-group-item {
+  font-weight: 400;
+  text-transform: capitalize;
+  border: 0;
+  border-bottom: 1px solid #eeeeee;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  padding: 15px 20px;
+  font-size: 22px;
+  display: inline-block;
+  width: 100%;
+  -webkit-box-align: center;
+  align-items: center;
+  font-weight: 400;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+}
+.list-group-item:last-child {
+  border-bottom-right-radius: inherit;
+  border-bottom-left-radius: inherit;
+}
+.list-group-item:first-child {
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+}
+.footer {
+  width: 100%;
+  background-color: #ddf6f0;
+  height: 82px;
+  bottom: 0;
+  padding: 16px;
+  box-shadow: 0 -3px 4px 0 rgba(0,0,0,.04);
+  border: solid 1px #c8ecdf;
+  border-radius: 0 0 6px 6px;
+}
+._e95a4c21 {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background: #fff;
+  border-top-right-radius: 8px;
+  overflow-y: auto;
+}
+._3b5e362f {
+  margin-top:10px;
+}
+._0be32cc5 {
+  font-size: 32x;
+  font-weight: 400;
+  line-height: 10px;
+  letter-spacing: -.04em;
+}
+._b22f1561 {
+  flex-direction: row;
+  padding: 0;
+  gap: var(--oneSpace);
+  font-weight: 800;
+}
+
+._927d9262, ._b22f1561 {
+  display: flex;
+  align-items: flex-start;
+}
+._f09a3dc7 {
+  font-weight: 800;
+}
+._86719728 {
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 10px;
+  letter-spacing: -.04em;
+}
+._2f600e4a {
+  margin-top: 30px;
+}
+._dc84ce0e {
+  margin-top: 20px;
+  width: 100%;
+}
+._dc84ce0e {
+  margin-top: 20px;
+  width: 100%;
+}
+._20efaeb9 {
+  margin-top: 14px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+._dc84ce0e>* {
+  vertical-align: middle;
+}
+@media (min-width: 1080px)
+{
+  ._ca9bdd25 {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+  }
+}
+#selected_cat {
+  text-transform: capitalize;
+}
+#selected_data{
+  margin-bottom: 0px;
+}
+.list-group-item.active:after {
+  content: '\2713';
+  display: inline-block;
+  color: red;
+  float: right;
+  width: 30px; 
+  height: 30px;
+  text-align: center;
+  background: #b2cc72;
+  color: #fff;
+  border-radius: 50%;
+  padding-top: 2px;
+}
+.mt-2{
+  margin-top: 5px;
+}
+.w-100{
+  width: 100%;
+}
+.selectable label{
+    font-family: Raleway;
+    font-size: 24px;
+    font-weight: 700;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    word-break: break-word;
+}
+.error{
+  display: none;
+  color: red;
+}
+.results .title-container{
+  text-align: center;
+}
+.results .loading,.results #result, .results #error{
+  display: block;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  height: 200px; /* Set the container height to viewport height for vertical alignment */
+  padding: 100px 20px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 33%;
+  height: auto;
+  transform: translate(-50%, -50%);
+  overflow: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.modal-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.modal-text p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.modal-text a {
+  color: #007bff;
+  text-decoration: underline;
+}
+.modal-text {
+  width: 90%;
+}
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+.search-vin-btn{
+  color: blue !important;
+  text-decoration: underline !important;
+  font-size: 16px;
+  text-align: right;
+  margin-top: 5px;
+  float: right;
+  cursor: pointer;
+}
+/* Styles for the input field */
+#searchInput {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Styles for the search button */
+#searchButton {
+  padding: 10px 20px;
+  margin-top: 10px;
+  background-color: #22395b;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#searchButton:hover {
+  background-color: #22395b;
+}
+.btn{
+  width: 100%;
+  background-color: #22395b;
+}
+.loading-modal {
+  display: none;
+  text-align: center;
+  margin-top: 10px;
+}
+.error-modal{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.offer_presentation_price{
+  text-align:center;
+  justify-content:center;
+}
+
+.photo-hint {
+  display: block;
+  color: #666;
+  font-size: 14px;
+}
+
+.photo-preview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.photo-preview-thumb {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+.vehicle-photo-input {
+  padding: 8px;
+  background: #fafafa;
+}

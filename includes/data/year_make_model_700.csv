@@ -1,0 +1,701 @@
+"MODEL_YEAR","VEHICLE_MAKE","MAKE_FULL_TITLE","VEHICLE_MODEL"
+"2018",DODG ,DODGE                      ,DURANGO SR
+"2013",ACUR ,ACURA                      ,MDX       
+"2007",HOND ,HONDA                      ,CMX250 C  
+"2008",BMW  ,BMW                        ,"335 I     "
+"2008",BMW  ,BMW Motorrad               ,"335 I     "
+"2009",DODG ,DODGE                      ,RAM 1500  
+"2017",NISS ,NISSAN                     ,VERSA S   
+"2002",CHEV ,CHEVROLET                  ,SILVERADO 
+"2017",HARL ,HARLEY DAVIDSON            ,FLHTCUTG T
+"2006",GMC  ,GMC                        ,ENVOY     
+"2013",DODG ,DODGE                      ,JOURNEY SX
+"2013",CHEV ,CHEVROLET                  ,EQUINOX LS
+"2005",LEXS ,LEXUS                      ,ES 330    
+"2004",INFI ,INFINITI                   ,FX45      
+"2004",INFI ,INFINITY                   ,FX45      
+"2013",TOYT ,TOYOTA                     ,YARIS     
+"1984",CADI ,CADILLAC                   ,ELDORADO  
+"2006",KIA  ,KIA                        ,SORENTO EX
+"2005",CHEV ,CHEVROLET                  ,SILVERADO 
+"2007",MERZ ,MERCEDES BENZ              ,E 350     
+"2014",NISS ,NISSAN                     ,SENTRA S  
+"2000",FORD ,FORD                       ,F150      
+"2006",LEXS ,LEXUS                      ,ES 330    
+"2016",CHEV ,CHEVROLET                  ,CRUZE PREM
+"2010",CADI ,CADILLAC                   ,SRX LUXURY
+"2001",BMW  ,BMW                        ,"325 I     "
+"2001",BMW  ,BMW Motorrad               ,"325 I     "
+"2017",CHEV ,CHEVROLET                  ,MALIBU LS 
+"2018",AUDI ,AUDI                       ,A4 PREMIUM
+"2018",VOLK ,VOLKSWAGEN                 ,JETTA S   
+"1991",TOYT ,TOYOTA                     ,COROLLA   
+"2011",CHEV ,CHEVROLET                  ,EQUINOX LT
+"2019",BMW  ,BMW                        ,"330XI     "
+"2019",BMW  ,BMW Motorrad               ,"330XI     "
+"2020",HYUN ,HYUNDAI                    ,KONA SEL P
+"2008",HOND ,HONDA                      ,CIVIC LX  
+"2013",CHEV ,CHEVROLET                  ,SILVERADO 
+"2013",CHEV ,CHEVROLET                  ,EQUINOX LT
+"2020",TOYT ,TOYOTA                     ,RAV4 XLE  
+"2006",HOND ,HONDA                      ,RIDGELINE 
+"2014",VOLV ,VOLVO                      ,S60 T5    
+"2016",NISS ,NISSAN                     ,PATHFINDER
+"2020",CHEV ,CHEVROLET                  ,EQUINOX LS
+"2008",NISS ,NISSAN                     ,FRONTIER K
+"2012",VOLK ,VOLKSWAGEN                 ,TIGUAN S  
+"2010",LEXS ,LEXUS                      ,HS 250H   
+"2019",DODG ,DODGE                      ,JOURNEY SE
+"1997",TOYT ,TOYOTA                     ,TERCEL CE 
+"2009",NISS ,NISSAN                     ,FRONTIER C
+"2014",RAM  ,RAM                        ,"3500 ST   "
+"2014",RAM  ,RAM TRUCKS                 ,"3500 ST   "
+"2003",CHRY ,CHRYSLER                   ,CONCORDE L
+"2017",NISS ,NISSAN                     ,SENTRA S  
+"2003",DODG ,DODGE                      ,RAM 2500 S
+"2008",NISS ,NISSAN                     ,ALTIMA 2.5
+"2011",HOND ,HONDA                      ,CIVIC EX  
+"2004",HOND ,HONDA                      ,PILOT EXL 
+"2006",TRAI ,TRAIL KING                 ,TRAILER   
+"2001",TOYT ,TOYOTA                     ,PRIUS     
+"2018",NISS ,NISSAN                     ,VERSA S   
+"2014",KIA  ,KIA                        ,OPTIMA EX 
+"2004",FORD ,FORD                       ,EXPLORER S
+"2011",HOND ,HONDA                      ,CR-V EXL  
+"2011",TOYT ,TOYOTA                     ,CAMRY BASE
+"2020",TOYT ,TOYOTA                     ,CAMRY LE  
+"2017",JEP  ,JEEP                       ,PATRIOT LA
+"1995",GMC  ,GMC                        ,SIERRA C15
+"2016",VOLK ,VOLKSWAGEN                 ,BEETLE SE 
+"2004",TOYT ,TOYOTA                     ,CAMRY LE  
+"2006",HYUN ,HYUNDAI                    ,SONATA GLS
+"2008",BMW  ,BMW                        ,"535 XI    "
+"2008",BMW  ,BMW Motorrad               ,"535 XI    "
+"2007",TOYT ,TOYOTA                     ,PRIUS     
+"2016",MITS ,MITSUBISHI                 ,LANCER ES 
+"1995",CHEV ,CHEVROLET                  ,CAMARO COU
+"2006",HOND ,HONDA                      ,ODYSSEY EX
+"2016",FORD ,FORD                       ,FUSION TIT
+"2008",MERZ ,MERCEDES BENZ              ,S 63 AMG  
+"2012",TOYT ,TOYOTA                     ,CAMRY BASE
+"2012",FORD ,FORD                       ,F150 SUPER
+"2015",HOND ,HONDA                      ,CIVIC LX  
+"2003",TOYT ,TOYOTA                     ,SIENNA LE 
+"2014",JEP  ,JEEP                       ,CHEROKEE L
+"2014",NISS ,NISSAN                     ,PATHFINDER
+"2012",CHEV ,CHEVROLET                  ,EQUINOX LT
+"2006",NISS ,NISSAN                     ,SENTRA 1.8
+"2008",TOYT ,TOYOTA                     ,PRIUS     
+"2013",CADI ,CADILLAC                   ,SRX LUXURY
+"2010",CHEV ,CHEVROLET                  ,COBALT 1LT
+"2017",KIA  ,KIA                        ,OPTIMA PLU
+"2012",BMW  ,BMW                        ,"750 LI    "
+"2012",BMW  ,BMW Motorrad               ,"750 LI    "
+"2007",TOYT ,TOYOTA                     ,COROLLA   
+"2014",SUBA ,SUBARU                     ,TRIBECA LI
+"2015",HOND ,HONDA                      ,CIVIC SE  
+"2017",HYUN ,HYUNDAI                    ,ACCENT SE 
+"2001",HOND ,HONDA                      ,CR-V EX   
+"2015",VOLK ,VOLKSWAGEN                 ,PASSAT S  
+"2003",FORD ,FORD                       ,F150      
+"2006",TOYT ,TOYOTA                     ,TUNDRA DOU
+"2014",NISS ,NISSAN                     ,ALTIMA 2.5
+"2018",HYUN ,HYUNDAI                    ,ELANTRA   
+"2013",VOLK ,VOLKSWAGEN                 ,CC SPORT  
+"2008",MERZ ,MERCEDES BENZ              ,C 300     
+"2016",FORD ,FORD                       ,MUSTANG GT
+"2011",HOND ,HONDA                      ,CR-V SE   
+"2005",FORD ,FORD                       ,TAURUS SE 
+"2009",HYUN ,HYUNDAI                    ,GENESIS 3.
+"2007",TOYT ,TOYOTA                     ,CAMRY CE  
+"2010",TOYT ,TOYOTA                     ,TACOMA DOU
+"2011",BUIC ,BUICK                      ,REGAL CXL 
+"2019",DODG ,DODGE                      ,DURANGO GT
+"1999",FORD ,FORD                       ,EXPLORER  
+"2012",CHRY ,CHRYSLER                   ,TOWN & COU
+"2013",CHEV ,CHEVROLET                  ,MALIBU LS 
+"1998",FORD ,FORD                       ,F250      
+"2008",TOYT ,TOYOTA                     ,SIENNA XLE
+"2005",FORD ,FORD                       ,ESCAPE XLT
+"2016",TESL ,TESLA                      ,MODEL S   
+"2011",HYUN ,HYUNDAI                    ,SONATA SE 
+"2003",HOND ,HONDA                      ,CIVIC EX  
+"2007",HOND ,HONDA                      ,ACCORD EX 
+"1992",VOLV ,VOLVO                      ,"940 BASE  "
+"2017",CHEV ,CHEVROLET                  ,CRUZE LS  
+"2007",INFI ,INFINITI                   ,G35       
+"2007",INFI ,INFINITY                   ,G35       
+"2011",LEXS ,LEXUS                      ,IS 250    
+"2009",GMC  ,GMC                        ,SIERRA C15
+"2015",YAMA ,YAMAHA                     ,FJ09      
+"2007",DODG ,DODGE                      ,SPRINTER 2
+"2006",LAND ,LAND ROVER                 ,RANGE ROVE
+"2006",LAND ,LANDAU BOAT CO             ,RANGE ROVE
+"2008",FORD ,FORD                       ,EDGE SEL  
+"2021",CARG ,CARGO                      ,CARGO TRAI
+"2016",HYUN ,HYUNDAI                    ,ACCENT SE 
+"2018",TOYT ,TOYOTA                     ,CAMRY LE  
+"2008",DODG ,DODGE                      ,CHARGER   
+"2011",NISS ,NISSAN                     ,JUKE S    
+"2011",HOND ,HONDA                      ,ACCORD LX 
+"2016",HOND ,HONDA                      ,CIVIC EX  
+"2007",TOYT ,TOYOTA                     ,CAMRY LE  
+"2012",HOND ,HONDA                      ,ACCORD    
+"2010",JEP  ,JEEP                       ,PATRIOT SP
+"2004",SUBA ,SUBARU                     ,LEGACY OUT
+"2004",VOLV ,VOLVO                      ,C70 HPT   
+"1996",FORD ,FORD                       ,ECONOLINE 
+"2011",HOND ,HONDA                      ,ACCORD    
+"2010",FORD ,FORD                       ,EDGE SE   
+"2009",TOYT ,TOYOTA                     ,COROLLA BA
+"2012",SUBA ,SUBARU                     ,IMPREZA PR
+"2014",JEP  ,JEEP                       ,WRANGLER U
+"1999",CHEV ,CHEVROLET                  ,S TRUCK S1
+"2015",AUDI ,AUDI                       ,A3        
+"2006",TOYT ,TOYOTA                     ,TUNDRA    
+"2014",HOND ,HONDA                      ,ACCORD    
+"2015",HYUN ,HYUNDAI                    ,SONATA SPO
+"2019",HOND ,HONDA                      ,ACCORD    
+"2009",HOND ,HONDA                      ,ACCORD EXL
+"2018",TOYT ,TOYOTA                     ,COROLLA L 
+"2010",HOND ,HONDA                      ,ACCORD    
+"2020",NISS ,NISSAN                     ,VERSA S   
+"2000",LINC ,LINCOLN                    ,TOWN CAR E
+"2000",LINC ,LINCOLN TOWNHOUSE          ,TOWN CAR E
+"2020",CHEV ,CHEVROLET                  ,EQUINOX LT
+"2013",AUDI ,AUDI                       ,A3        
+"2008",SMRT ,SMART CARS                 ,FORTWO PAS
+"2016",HOND ,HONDA                      ,ACCORD    
+"2018",JEP  ,JEEP                       ,COMPASS LA
+"2019",ACUR ,ACURA                      ,CSX       
+"2003",HOND ,HONDA                      ,ACCORD LX 
+"2013",LEXS ,LEXUS                      ,RX 350 BAS
+"2010",KIA  ,KIA                        ,SOUL +    
+"2008",BMW  ,BMW                        ,X5 4.8I   
+"2008",BMW  ,BMW Motorrad               ,X5 4.8I   
+"1999",JEP  ,JEEP                       ,GRAND CHER
+"2005",FRHT ,FREIGHTLINER               ,M2 106 MED
+"2005",FRHT ,FREIGLINER                 ,M2 106 MED
+"2021",GMC  ,GMC                        ,SIERRA K15
+"2005",CADI ,CADILLAC                   ,CTS HI FEA
+"2014",TOYT ,TOYOTA                     ,COROLLA L 
+"2003",VOLK ,VOLKSWAGEN                 ,JETTA GLS 
+"2015",TOYT ,TOYOTA                     ,SCION TC  
+"2014",DODG ,DODGE                      ,CHARGER R/
+"2016",VOLK ,VOLKSWAGEN                 ,PASSAT SE 
+"2008",FORD ,FORD                       ,F-250     
+"2019",CHEV ,CHEVROLET                  ,TAHOE 2WD 
+"2017",CHEV ,CHEVROLET                  ,CRUZE LT  
+"2014",LEXS ,LEXUS                      ,IS 250    
+"2001",BMW  ,BMW                        ,C600      
+"2001",BMW  ,BMW Motorrad               ,C600      
+"2019",DODG ,DODGE                      ,GRAND CARA
+"1999",HOND ,HONDA                      ,ACC S EX  
+"2013",HOND ,HONDA                      ,PILOT TOUR
+"2002",CHRY ,CHRYSLER                   ,TOWN & COU
+"2007",GMC  ,GMC                        ,NEW SIERRA
+"1995",BMW  ,BMW                        ,C600      
+"1995",BMW  ,BMW Motorrad               ,C600      
+"2016",LAND ,LAND ROVER                 ,DISCOVERY 
+"2016",LAND ,LANDAU BOAT CO             ,DISCOVERY 
+"2017",TOYT ,TOYOTA                     ,RAV4 XLE  
+"2010",AUST ,AUSTIN                     ,"3000 MKII "
+"2021",AUDI ,AUDI                       ,ALLROAD   
+"2020",KIA  ,KIA                        ,SOUL LX   
+"2008",BENT ,BENTLEY                    ,BENTAYGA  
+"2008",BENT ,BENTLY                     ,BENTAYGA  
+"2013",HOND ,HONDA                      ,ACCORD    
+"2019",NISS ,NISSAN                     ,VERSA S   
+"2007",AUDI ,AUDI                       ,A3        
+"2002",LEXS ,LEXUS                      ,ES 300    
+"2015",HOND ,HONDA                      ,ACCORD    
+"2014",MAZD ,MAZDA                      ,"3 GRAND TO"
+"2008",FORD ,FORD                       ,FUSION SE 
+"2016",CHEV ,CHEVROLET                  ,SUBURBAN C
+"2015",VOLK ,VOLKSWAGEN                 ,JETTA SE  
+"2002",HOND ,HONDA                      ,CIVIC EX  
+"2004",TOYT ,TOYOTA                     ,"4RUNNER   "
+"2016",MITS ,MITSUBISHI                 ,LANCER    
+"2004",HOND ,HONDA                      ,CIVIC HYBR
+"1996",ACUR ,ACURA                      ,"2.5TL     "
+"1983",CADI ,CADILLAC                   ,ELDORADO  
+"2014",CHEV ,CHEVROLET                  ,TRAVERSE L
+"2008",HOND ,HONDA                      ,CIVIC EX  
+"2016",AUDI ,AUDI                       ,A3        
+"2006",HOND ,HONDA                      ,ACCORD VAL
+"2008",TOYT ,TOYOTA                     ,CAMRY SOLA
+"2008",BMW  ,BMW                        ,"135 I     "
+"2008",BMW  ,BMW Motorrad               ,"135 I     "
+"2004",LEXS ,LEXUS                      ,LS 430    
+"2002",TOYT ,TOYOTA                     ,CELICA    
+"2002",TOYT ,TOYOTA                     ,CAMRY LE  
+"2006",GM   ,GM                         ,BELAIR    
+"2007",NISS ,NISSAN                     ,FRONTIER K
+"2011",BMW  ,BMW                        ,"328 I     "
+"2011",BMW  ,BMW Motorrad               ,"328 I     "
+"2011",ACUR ,ACURA                      ,CSX       
+"2014",AUDI ,AUDI                       ,A3        
+"2006",NISS ,NISSAN                     ,MAXIMA SE 
+"2015",KIA  ,KIA                        ,FORTE LX  
+"2005",AUDI ,AUDI                       ,A4 2.0T QU
+"2004",TOYT ,TOYOTA                     ,SIENNA    
+"2005",HYUN ,HYUNDAI                    ,ACCENT GS 
+"2001",VOLV ,VOLVO                      ,S80 T6 EXE
+"2015",JEP  ,JEEP                       ,GRAND CHER
+"2013",CHEV ,CHEVROLET                  ,VOLT      
+"2011",NISS ,NISSAN                     ,ALTIMA BAS
+"2001",CHEV ,CHEVROLET                  ,EXPRESS CA
+"2009",TOYT ,TOYOTA                     ,RAV4      
+"1994",FORD ,FORD                       ,ECONOLINE 
+"2008",MERZ ,MERCEDES BENZ              ,E 350     
+"2003",FORD ,FORD                       ,E 250     
+"2007",DODG ,DODGE                      ,CALIBER   
+"2007",DODG ,DODGE                      ,NITRO SXT 
+"2000",GMC  ,GMC                        ,YUKON XL K
+"2002",CHEV ,CHEVROLET                  ,SUBURBAN C
+"2011",SAA  ,SAAB                       ,"9-3 2.0T  "
+"2005",FORD ,FORD                       ,RANGER    
+"2006",TOYT ,TOYOTA                     ,SIENNA CE 
+"2012",BMW  ,BMW                        ,"750 XI    "
+"2012",BMW  ,BMW Motorrad               ,"750 XI    "
+"2006",DODG ,DODGE                      ,MAGNUM    
+"2015",HYUN ,HYUNDAI                    ,ELANTRA SE
+"2013",TOYT ,TOYOTA                     ,COROLLA BA
+"2003",FORD ,FORD                       ,F250 SUPER
+"2008",TOYT ,TOYOTA                     ,HIGHLANDER
+"2005",MERZ ,MERCEDES BENZ              ,C 240     
+"1994",BUIC ,BUICK                      ,REGAL GRAN
+"2013",FORD ,FORD                       ,F150 SUPER
+"2005",HOND ,HONDA                      ,PILOT EXL 
+"2006",HOND ,HONDA                      ,ACCORD SE 
+"2017",KIA  ,KIA                        ,SPORTAGE L
+"2004",CHRY ,CHRYSLER                   ,SEBRING LX
+"2018",SUBA ,SUBARU                     ,OUTBACK 2.
+"2005",VOLV ,VOLVO                      ,XC90 V8   
+"2005",MERZ ,MERCEDES BENZ              ,C320      
+"2017",CHEV ,CHEVROLET                  ,SPARK LS  
+"2014",TOYT ,TOYOTA                     ,HIGHLANDER
+"2008",CADI ,CADILLAC                   ,CTS HI FEA
+"2011",CHEV ,CHEVROLET                  ,SILVERADO 
+"2009",HYUN ,HYUNDAI                    ,SONATA GLS
+"2008",PONT ,PONTIAC                    ,G6 GT     
+"2005",FORD ,FORD                       ,EXPLORER S
+"2019",VOLK ,VOLKSWAGEN                 ,ATLAS SE  
+"2005",AUDI ,AUDI                       ,A4 1.8T   
+"2007",NISS ,NISSAN                     ,SENTRA 2.0
+"2013",HOND ,HONDA                      ,FIT SPORT 
+"2016",NISS ,NISSAN                     ,ALTIMA 2.5
+"2003",TOYT ,TOYOTA                     ,ECHO      
+"2005",HOND ,HONDA                      ,ACCORD EX 
+"1995",GMC  ,GMC                        ,SIERRA K35
+"2014",RAM  ,RAM                        ,"1500 SLT  "
+"2014",RAM  ,RAM TRUCKS                 ,"1500 SLT  "
+"2014",HYUN ,HYUNDAI                    ,SONATA GLS
+"2008",JEP  ,JEEP                       ,GRAND CHER
+"2011",CHRY ,CHRYSLER                   ,TOWN & COU
+"2009",DODG ,DODGE                      ,JOURNEY SX
+"2004",MAZD ,MAZDA                      ,"6 I       "
+"2016",HOND ,HONDA                      ,ACCORD LX 
+"2001",FORD ,FORD                       ,RANGER SUP
+"2007",FORD ,FORD                       ,ESCAPE XLT
+"2008",DODG ,DODGE                      ,CALIBER   
+"2009",TOYT ,TOYOTA                     ,CAMRY BASE
+"2011",MIN  ,MINI                       ,COOPER    
+"2000",TOYT ,TOYOTA                     ,AVALON XL 
+"2011",KIA  ,KIA                        ,SOUL +    
+"2013",TOYT ,TOYOTA                     ,SCION XB  
+"2011",FORD ,FORD                       ,TAURUS SEL
+"2006",MERZ ,MERCEDES BENZ              ,C 230     
+"2011",FORD ,FORD                       ,FUSION SEL
+"2005",INFI ,INFINITI                   ,G35       
+"2005",INFI ,INFINITY                   ,G35       
+"2002",NISS ,NISSAN                     ,XTERRA XE 
+"2013",KIA  ,KIA                        ,RIO LX    
+"2004",MAZD ,MAZDA                      ,RX8       
+"2011",JEP  ,JEEP                       ,GRAND CHER
+"2018",KIA  ,KIA                        ,OPTIMA SX 
+"2001",LEXS ,LEXUS                      ,RX        
+"2005",NISS ,NISSAN                     ,ALTIMA S  
+"2009",NISS ,NISSAN                     ,SENTRA 2.0
+"2001",LEXS ,LEXUS                      ,RX 300    
+"2006",TOYT ,TOYOTA                     ,COROLLA CE
+"2007",JEP  ,JEEP                       ,COMPASS   
+"2007",SUZI ,SUZUKI                     ,GSF1250 S 
+"2010",CHEV ,CHEVROLET                  ,CAMARO LT 
+"2017",BUIC ,BUICK                      ,ENCORE PRE
+"2011",FORD ,FORD                       ,EDGE LIMIT
+"2006",MERC ,MERCURY                    ,MARINER   
+"2017",CHEV ,CHEVROLET                  ,MALIBU LT 
+"2012",CHEV ,CHEVROLET                  ,SUBURBAN K
+"2009",FORD ,FORD                       ,FLEX LIMIT
+"2008",CHRY ,CHRYSLER                   ,TOWN & COU
+"2016",CHEV ,CHEVROLET                  ,CRUZE LIMI
+"2017",VOLK ,VOLKSWAGEN                 ,JETTA SE  
+"2005",FORD ,FORD                       ,TAURUS SEL
+"2004",BMW  ,BMW                        ,"330 I     "
+"2004",BMW  ,BMW Motorrad               ,"330 I     "
+"2010",FORD ,FORD                       ,FUSION SE 
+"2000",MITS ,MITSUBISHI                 ,MONTERO SP
+"2011",JEP  ,JEEP                       ,PATRIOT SP
+"2013",CHEV ,CHEVROLET                  ,IMPALA LT 
+"2016",NISS ,NISSAN                     ,SENTRA S  
+"2011",LINC ,LINCOLN                    ,MKT       
+"2011",LINC ,LINCOLN TOWNHOUSE          ,MKT       
+"2013",MAZD ,MAZDA                      ,"3 I       "
+"2011",CHEV ,CHEVROLET                  ,EQUINOX   
+"2015",FORD ,FORD                       ,TRANSIT CO
+"2020",KIA  ,KIA                        ,FORTE FE  
+"2006",CHEV ,CHEVROLET                  ,SILVERADO 
+"2010",CHEV ,CHEVROLET                  ,EQUINOX LT
+"2009",CHEV ,CHEVROLET                  ,SILVERADO 
+"2007",GMC  ,GMC                        ,SAVANA CUT
+"2007",JEP  ,JEEP                       ,GRAND CHER
+"2012",CHRY ,CHRYSLER                   ,"200 LX    "
+"2012",HYUN ,HYUNDAI                    ,SONATA GLS
+"2005",FORD ,FORD                       ,EXPLORER X
+"2003",NISS ,NISSAN                     ,SENTRA SE-
+"2007",CHEV ,CHEVROLET                  ,TRAILBLAZE
+"2013",NISS ,NISSAN                     ,ARMADA SV 
+"1998",JEP  ,JEEP                       ,CHEROKEE S
+"2004",LEXS ,LEXUS                      ,GX 470    
+"2006",HOND ,HONDA                      ,PILOT EX  
+"2013",AUDI ,AUDI                       ,A4 PREMIUM
+"2013",MERZ ,MERCEDES BENZ              ,GLK 350 4M
+"2020",DODG ,DODGE                      ,CHALLENGER
+"2011",GMC  ,GMC                        ,SIERRA K15
+"2009",CHEV ,CHEVROLET                  ,HHR LT    
+"2017",GMC  ,GMC                        ,YUKON DENA
+"2007",DODG ,DODGE                      ,RAM 1500 S
+"2019",DODG ,DODGE                      ,CHALLENGER
+"1995",JEP  ,JEEP                       ,WRANGLER /
+"2014",VOLK ,VOLKSWAGEN                 ,TIGUAN S  
+"2012",HYUN ,HYUNDAI                    ,ELANTRA GL
+"2011",CHEV ,CHEVROLET                  ,CRUZE LT  
+"2004",TOYT ,TOYOTA                     ,SIENNA XLE
+"2013",NISS ,NISSAN                     ,FRONTIER S
+"2013",HYUN ,HYUNDAI                    ,TUCSON GLS
+"2009",HOND ,HONDA                      ,CR-V EXL  
+"2014",TOYT ,TOYOTA                     ,SCION XB  
+"2018",FORD ,FORD                       ,F150 SUPER
+"2010",NISS ,NISSAN                     ,SENTRA 2.0
+"2004",MERZ ,MERCEDES BENZ              ,E 500     
+"2009",KIA  ,KIA                        ,BORREGO LX
+"2005",TOYT ,TOYOTA                     ,CAMRY LE  
+"2005",GMC  ,GMC                        ,ENVOY     
+"1998",FORD ,FORD                       ,EXPLORER  
+"2007",JEP  ,JEEP                       ,COMMANDER 
+"2011",KIA  ,KIA                        ,OPTIMA LX 
+"2010",GMC  ,GMC                        ,SIERRA C15
+"2014",BMW  ,BMW                        ,"528 XI    "
+"2014",BMW  ,BMW Motorrad               ,"528 XI    "
+"1999",FORD ,FORD                       ,F250 SUPER
+"1999",HOND ,HONDA                      ,CR-V EX   
+"2005",HOND ,HONDA                      ,CR-V LX   
+"2019",KIA  ,KIA                        ,SORENTO LX
+"2019",CHEV ,CHEVROLET                  ,EQUINOX LS
+"2020",SUBA ,SUBARU                     ,IMPREZA   
+"2010",CHEV ,CHEVROLET                  ,IMPALA LT 
+"2008",TOYT ,TOYOTA                     ,CAMRY CE  
+"2004",PORS ,PORSCHE                    ,CAYENNE S 
+"2016",NISS ,NISSAN                     ,MURANO S  
+"2008",TOYT ,TOYOTA                     ,SIENNA CE 
+"1973",CHEV ,CHEVROLET                  ,C-10      
+"2010",SUBA ,SUBARU                     ,IMPREZA 2.
+"2018",RAM  ,RAM                        ,"1500 SLT  "
+"2018",RAM  ,RAM TRUCKS                 ,"1500 SLT  "
+"2015",SUBA ,SUBARU                     ,WRX PREMIU
+"2007",HOND ,HONDA                      ,CR-V      
+"2017",TOYT ,TOYOTA                     ,TACOMA DOU
+"2017",AUDI ,AUDI                       ,A6 PREMIUM
+"2005",CHEV ,CHEVROLET                  ,SUBURBAN K
+"2001",JEP  ,JEEP                       ,GRAND CHER
+"2006",HOND ,HONDA                      ,CR-V SE   
+"2007",FORD ,FORD                       ,EDGE SE   
+"2012",BUIC ,BUICK                      ,LACROSSE  
+"2020",KIA  ,KIA                        ,TELLURIDE 
+"2001",TOYT ,TOYOTA                     ,RAV4      
+"2009",PONT ,PONTIAC                    ,VIBE      
+"1937",CADI ,CADILLAC                   ,"4D        "
+"2009",HYUN ,HYUNDAI                    ,ELANTRA GL
+"1997",TOYT ,TOYOTA                     ,COROLLA DX
+"2009",MERC ,MERCURY                    ,MILAN PREM
+"2005",SUBA ,SUBARU                     ,LEGACY    
+"2012",TOYT ,TOYOTA                     ,CAMRY     
+"2007",DODG ,DODGE                      ,MAGNUM SE 
+"2020",FORD ,FORD                       ,EXPLORER X
+"2006",ACUR ,ACURA                      ,TSX       
+"2014",FORD ,FORD                       ,ESCAPE SE 
+"2017",FIAT ,FIAT                       ,"500L TREKK"
+"2007",NISS ,NISSAN                     ,FRONTIER C
+"2014",HOND ,HONDA                      ,ODYSSEY EX
+"2011",DODG ,DODGE                      ,AVENGER EX
+"2014",HYUN ,HYUNDAI                    ,TUCSON GLS
+"2013",TOYT ,TOYOTA                     ,AVALON BAS
+"2011",DODG ,DODGE                      ,JOURNEY   
+"2000",MERZ ,MERCEDES BENZ              ,ML 320    
+"2018",CHEV ,CHEVROLET                  ,CRUZE LS  
+"2015",NISS ,NISSAN                     ,ALTIMA 2.5
+"2014",HYUN ,HYUNDAI                    ,ELANTRA SE
+"2021",FORD ,FORD                       ,BRONCO SPO
+"2019",NISS ,NISSAN                     ,VERSA NOTE
+"2006",VOLK ,VOLKSWAGEN                 ,NEW BEETLE
+"2014",FORD ,FORD                       ,FOCUS SE  
+"2011",FORD ,FORD                       ,FUSION HYB
+"2019",CHRY ,CHRYSLER                   ,"300 S     "
+"2014",AUDI ,AUDI                       ,Q7 PRESTIG
+"2021",NISS ,NISSAN                     ,SENTRA SV 
+"2007",SUBA ,SUBARU                     ,IMPREZA 2.
+"2001",VOLK ,VOLKSWAGEN                 ,GTI GLX   
+"2012",NISS ,NISSAN                     ,ALTIMA BAS
+"2017",RAM  ,RAM                        ,"1500 SLT  "
+"2017",RAM  ,RAM TRUCKS                 ,"1500 SLT  "
+"2019",DODG ,DODGE                      ,CHARGER GT
+"2014",HOND ,HONDA                      ,CIVIC LX  
+"2018",MERZ ,MERCEDES BENZ              ,C 300     
+"1996",FORD ,FORD                       ,F150      
+"1997",NISS ,NISSAN                     ,TRUCK KING
+"2018",KIA  ,KIA                        ,SPORTAGE L
+"2014",HYUN ,HYUNDAI                    ,SANTA FE S
+"2009",NISS ,NISSAN                     ,MURANO S  
+"2015",DODG ,DODGE                      ,DURANGO SX
+"2004",DODG ,DODGE                      ,STRATUS SE
+"2003",HOND ,HONDA                      ,CIVIC LX  
+"2006",TOYT ,TOYOTA                     ,CAMRY     
+"2006",FORD ,FORD                       ,FIVE HUNDR
+"2006",JEP  ,JEEP                       ,GRAND CHER
+"2006",DODG ,DODGE                      ,MAGNUM SXT
+"2006",VOLK ,VOLKSWAGEN                 ,JETTA 2.5 
+"2019",NISS ,NISSAN                     ,SENTRA S  
+"2005",LAND ,LAND ROVER                 ,RANGE ROVE
+"2005",LAND ,LANDAU BOAT CO             ,RANGE ROVE
+"2011",SUBA ,SUBARU                     ,OUTBACK 2.
+"1997",CHEV ,CHEVROLET                  ,GMT-400 K1
+"2013",FORD ,FORD                       ,ESCAPE SE 
+"2010",HOND ,HONDA                      ,ACCORD EXL
+"2007",CHEV ,CHEVROLET                  ,SILVERADO 
+"2013",VOLK ,VOLKSWAGEN                 ,JETTA HYBR
+"2003",SATU ,SATURN                     ,VUE       
+"2003",SATU ,SNOWEX                     ,VUE       
+"2011",HOND ,HONDA                      ,ACCORD EX 
+"2001",JEP  ,JEEP                       ,CHEROKEE S
+"2016",FORD ,FORD                       ,EDGE TITAN
+"2004",NISS ,NISSAN                     ,SENTRA 1.8
+"1999",ISU  ,ISUZU                      ,TROOPER S 
+"2012",KIA  ,KIA                        ,SORENTO BA
+"2004",FORD ,FORD                       ,F150      
+"2012",MITS ,MITSUBISHI                 ,OUTLANDER 
+"2004",ISU  ,ISUZU                      ,ASCENDER S
+"2018",NISS ,NISSAN                     ,ROGUE S   
+"2016",TOYT ,TOYOTA                     ,TACOMA ACC
+"2006",TOYT ,TOYOTA                     ,PRIUS     
+"2016",NISS ,NISSAN                     ,VERSA S   
+"2017",VOLK ,VOLKSWAGEN                 ,TIGUAN S  
+"2001",FORD ,FORD                       ,F150 SUPER
+"2003",TOYT ,TOYOTA                     ,COROLLA CE
+"1997",BUIC ,BUICK                      ,REGAL LS  
+"2009",HOND ,HONDA                      ,FIT SPORT 
+"2007",VOLK ,VOLKSWAGEN                 ,NEW BEETLE
+"2011",CHRY ,CHRYSLER                   ,"200 LIMITE"
+"2008",CHEV ,CHEVROLET                  ,EQUINOX LT
+"2007",BMW  ,BMW                        ,"328 IT    "
+"2007",BMW  ,BMW Motorrad               ,"328 IT    "
+"2016",VOLK ,VOLKSWAGEN                 ,JETTA S   
+"2014",SUBA ,SUBARU                     ,FORESTER 2
+"2011",MERZ ,MERCEDES BENZ              ,E 350     
+"2017",MASE ,MASERATI                   ,GHIBLI S  
+"2006",CHEV ,CHEVROLET                  ,AVALANCHE 
+"2000",TOYT ,TOYOTA                     ,ECHO      
+"2017",FORD ,FORD                       ,FUSION SE 
+"2014",NISS ,NISSAN                     ,MAXIMA S  
+"2020",HYUN ,HYUNDAI                    ,ELANTRA SE
+"2014",JEP  ,JEEP                       ,WRANGLER S
+"2016",NISS ,NISSAN                     ,ROGUE S   
+"2010",CHEV ,CHEVROLET                  ,MALIBU LS 
+"2012",DODG ,DODGE                      ,CHALLENGER
+"2008",HOND ,HONDA                      ,ACCORD EXL
+"2010",CHEV ,CHEVROLET                  ,HHR LT    
+"2015",NISS ,NISSAN                     ,ROGUE SELE
+"2013",SUBA ,SUBARU                     ,OUTBACK 2.
+"2019",BUIC ,BUICK                      ,ENCLAVE AV
+"2007",FORD ,FORD                       ,EDGE SEL P
+"2004",HOND ,HONDA                      ,CR-V EX   
+"2019",JEP  ,JEEP                       ,COMPASS LA
+"2016",FORD ,FORD                       ,FIESTA S  
+"2012",INFI ,INFINITI                   ,FX35      
+"2012",INFI ,INFINITY                   ,FX35      
+"2016",KIA  ,KIA                        ,SOUL      
+"2007",FORD ,FORD                       ,EXPLORER X
+"2020",KIA  ,KIA                        ,OPTIMA LX 
+"2005",KIA  ,KIA                        ,SEDONA EX 
+"2016",CHEV ,CHEVROLET                  ,TRAVERSE L
+"2018",HYUN ,HYUNDAI                    ,ELANTRA SE
+"2016",HOND ,HONDA                      ,CR-V EX   
+"2008",HOND ,HONDA                      ,PILOT SE  
+"2003",CHEV ,CHEVROLET                  ,TAHOE C150
+"2002",TOYT ,TOYOTA                     ,SEQUOIA LI
+"2010",VOLK ,VOLKSWAGEN                 ,TOUAREG TD
+"2009",SUZI ,SUZUKI                     ,SX4 SPORT 
+"2001",HOND ,HONDA                      ,ACCORD EX 
+"2007",SUZI ,SUZUKI                     ,GRAND VITA
+"2020",ROCK ,ROCKWOOD                   ,MINI LITE 
+"2007",HYUN ,HYUNDAI                    ,SONATA SE 
+"2001",CHEV ,CHEVROLET                  ,BLAZER    
+"2013",HOND ,HONDA                      ,CIVIC LX  
+"2003",JEP  ,JEEP                       ,GRAND CHER
+"2006",FORD ,FORD                       ,F150      
+"2013",HYUN ,HYUNDAI                    ,SONATA    
+"2015",SUBA ,SUBARU                     ,WRX LIMITE
+"2005",DODG ,DODGE                      ,GRAND CARA
+"2008",FORD ,FORD                       ,FOCUS SE  
+"2015",CHEV ,CHEVROLET                  ,TAHOE K150
+"2014",CHEV ,CHEVROLET                  ,SILVERADO 
+"2002",BMW  ,BMW                        ,"330 I     "
+"2002",BMW  ,BMW Motorrad               ,"330 I     "
+"2014",NISS ,NISSAN                     ,ROGUE SELE
+"2006",GMC  ,GMC                        ,NEW SIERRA
+"2010",DODG ,DODGE                      ,JOURNEY SX
+"2015",KIA  ,KIA                        ,OPTIMA EX 
+"2008",CHEV ,CHEVROLET                  ,AVEO BASE 
+"1998",FORD ,FORD                       ,MUSTANG   
+"2013",FORD ,FORD                       ,MUSTANG   
+"2019",GMC  ,GMC                        ,SIERRA K15
+"2003",TOYT ,TOYOTA                     ,SEQUOIA LI
+"2012",TOYT ,TOYOTA                     ,COROLLA BA
+"2001",FORD ,FORD                       ,F350 SRW S
+"2012",NISS ,NISSAN                     ,VERSA S   
+"1999",PLYM ,PLYMOUTH                   ,VOYAGER SE
+"2001",TOYT ,TOYOTA                     ,SEQUOIA SR
+"2003",NISS ,NISSAN                     ,PATHFINDER
+"2011",HOND ,HONDA                      ,PILOT EX  
+"2009",HOND ,HONDA                      ,CR-V LX   
+"2010",NISS ,NISSAN                     ,ALTIMA BAS
+"2012",SUBA ,SUBARU                     ,LEGACY 2.5
+"2021",KIA  ,KIA                        ,K5 GT LINE
+"2012",MAZD ,MAZDA                      ,"3 I       "
+"2017",JEP  ,JEEP                       ,WRANGLER S
+"2011",TOYT ,TOYOTA                     ,PRIUS     
+"2001",ACUR ,ACURA                      ,MDX       
+"2019",VOLK ,VOLKSWAGEN                 ,JETTA S   
+"2019",CHEV ,CHEVROLET                  ,IMPALA LT 
+"2012",FORD ,FORD                       ,EXPLORER X
+"2008",KIA  ,KIA                        ,SEDONA EX 
+"2019",NISS ,NISSAN                     ,ROGUE S   
+"2016",FORD ,FORD                       ,ESCAPE SE 
+"2015",CHRY ,CHRYSLER                   ,TOWN & COU
+"2007",HYUN ,HYUNDAI                    ,SANTA FE G
+"2018",VOLK ,VOLKSWAGEN                 ,TIGUAN SE 
+"2004",HOND ,HONDA                      ,ODYSSEY EX
+"2009",TOYT ,TOYOTA                     ,RAV4 LIMIT
+"2018",MIN  ,MINI                       ,COOPER S  
+"2018",HINO ,HINO                       ,TRUCK     
+"2011",TOYT ,TOYOTA                     ,COROLLA BA
+"2019",TOYT ,TOYOTA                     ,CAMRY L   
+"2014",TOYT ,TOYOTA                     ,PRIUS PLUG
+"2011",HYUN ,HYUNDAI                    ,ACCENT GLS
+"2011",HOND ,HONDA                      ,ELEMENT EX
+"2002",DODG ,DODGE                      ,RAM 1500  
+"2006",DODG ,DODGE                      ,DAKOTA QUA
+"2019",HOND ,HONDA                      ,ACCORD LX 
+"2013",BUIC ,BUICK                      ,REGAL PREM
+"2012",CHEV ,CHEVROLET                  ,TRAVERSE L
+"2014",HOND ,HONDA                      ,PILOT TOUR
+"2013",HOND ,HONDA                      ,CIVIC EX  
+"2018",FORD ,FORD                       ,FIESTA SE 
+"2019",SUBA ,SUBARU                     ,CROSSTREK 
+"1998",FORD ,FORD                       ,MUSTANG GT
+"2020",RAM  ,RAM                        ,"1500 CLASS"
+"2020",RAM  ,RAM TRUCKS                 ,"1500 CLASS"
+"2010",DODG ,DODGE                      ,CHARGER R/
+"2015",CHEV ,CHEVROLET                  ,EQUINOX LT
+"2009",PONT ,PONTIAC                    ,TORRENT   
+"2006",FORD ,FORD                       ,EXPLORER X
+"2004",TOYT ,TOYOTA                     ,TACOMA XTR
+"2007",DODG ,DODGE                      ,CALIBER R/
+"2012",HOND ,HONDA                      ,CIVIC LX  
+"2003",TOYT ,TOYOTA                     ,COROLLA MA
+"2018",CHEV ,CHEVROLET                  ,SILVERADO 
+"2014",CHEV ,CHEVROLET                  ,IMPALA LT 
+"2008",INFI ,INFINITI                   ,G35       
+"2008",INFI ,INFINITY                   ,G35       
+"2019",CHEV ,CHEVROLET                  ,TRAVERSE L
+"2010",TOYT ,TOYOTA                     ,COROLLA   
+"2008",FORD ,FORD                       ,ESCAPE LIM
+"2017",TOYT ,TOYOTA                     ,COROLLA L 
+"2013",BMW  ,BMW                        ,"535 I     "
+"2013",BMW  ,BMW Motorrad               ,"535 I     "
+"2003",BMW  ,BMW                        ,X5 4.4I   
+"2003",BMW  ,BMW Motorrad               ,X5 4.4I   
+"2008",NISS ,NISSAN                     ,PATHFINDER
+"2012",FORD ,FORD                       ,FUSION SEL
+"2012",FORD ,FORD                       ,FOCUS SE  
+"2005",ACUR ,ACURA                      ,TL        
+"2002",TOYT ,TOYOTA                     ,RAV4      
+"2015",HOND ,HONDA                      ,FIT EX    
+"2010",FORD ,FORD                       ,FUSION    
+"2009",FORD ,FORD                       ,FOCUS SE  
+"2014",FORD ,FORD                       ,FIESTA SE 
+"1993",CHEV ,CHEVROLET                  ,GMT-400 C1
+"2013",FORD ,FORD                       ,FOCUS SE  
+"2009",CHEV ,CHEVROLET                  ,COBALT LT 
+"2011",FORD ,FORD                       ,F150      
+"2017",HOND ,HONDA                      ,CR-V EXL  
+"2006",CHEV ,CHEVROLET                  ,TRAILBLAZE
+"1999",DODG ,DODGE                      ,RAM 2500  
+"2007",FORD ,FORD                       ,FOCUS ZX4 
+"2004",JEP  ,JEEP                       ,GRAND CHER
+"2005",TOYT ,TOYOTA                     ,PRIUS     
+"2007",HOND ,HONDA                      ,PILOT EXL 
+"2014",TOYT ,TOYOTA                     ,CAMRY L   
+"2014",ACUR ,ACURA                      ,RDX TECHNO
+"2017",NISS ,NISSAN                     ,ROGUE S   
+"2016",TOYT ,TOYOTA                     ,CAMRY LE  
+"2017",TOYT ,TOYOTA                     ,HIGHLANDER
+"2015",NISS ,NISSAN                     ,SENTRA S  
+"2011",DODG ,DODGE                      ,CALIBER MA
+"2020",HOND ,HONDA                      ,ODYSSEY EX
+"2012",AUDI ,AUDI                       ,Q5 PRESTIG
+"2016",HARL ,HARLEY DAVIDSON            ,FLHTCU ULT
+"2018",CHEV ,CHEVROLET                  ,EQUINOX LT
+"2001",HOND ,HONDA                      ,PRELUDE   
+"2003",HYUN ,HYUNDAI                    ,SANTA FE G
+"2013",ACUR ,ACURA                      ,RDX       
+"2007",SIER ,SAMWATYLTD                 ,CAMPER    
+"2003",MAZD ,MAZDA                      ,"6 I       "
+"2013",NISS ,NISSAN                     ,JUKE S    
+"2007",HYUN ,HYUNDAI                    ,SANTA FE  
+"2003",KIA  ,KIA                        ,SORENTO EX
+"2007",JEP  ,JEEP                       ,LIBERTY SP
+"2011",INFI ,INFINITI                   ,G37 BASE  
+"2011",INFI ,INFINITY                   ,G37 BASE  
+"2014",DODG ,DODGE                      ,CHARGER PO
+"2018",SUBA ,SUBARU                     ,LEGACY 2.5
+"2015",HOND ,HONDA                      ,CIVIC EXL 
+"2001",HOND ,HONDA                      ,CIVIC DX  
+"2013",GMC  ,GMC                        ,SIERRA K25
+"2008",JEP  ,JEEP                       ,COMPASS SP
+"2007",MITS ,MITSUBISHI                 ,ECLIPSE GS
+"2013",KIA  ,KIA                        ,SORENTO LX
+"2001",LEXS ,LEXUS                      ,GS 300    
+"2000",FORD ,FORD                       ,EXPLORER X
+"2004",KIA  ,KIA                        ,SEDONA EX 
+"2012",VOLK ,VOLKSWAGEN                 ,JETTA SE  
+"2007",LEXS ,LEXUS                      ,ES 350    
+"2014",VOLK ,VOLKSWAGEN                 ,JETTA TDI 
+"2016",JEP  ,JEEP                       ,GRAND CHER
+"2015",TOYT ,TOYOTA                     ,COROLLA L 
+"2008",PONT ,PONTIAC                    ,VIBE      
+"2001",VOLV ,VOLVO                      ,V70 2.4T  
+"2013",CHEV ,CHEVROLET                  ,CAPTIVA LT
+"2008",LEXS ,LEXUS                      ,IS 250    
+"2020",HYUN ,HYUNDAI                    ,TUCSON LIM
+"1999",CHEV ,CHEVROLET                  ,TAHOE K150
+"1999",TOYT ,TOYOTA                     ,"4RUNNER SR"
+"2010",TOYT ,TOYOTA                     ,RAV4      
+"2018",DODG ,DODGE                      ,JOURNEY CR
+"2010",CHEV ,CHEVROLET                  ,AVEO LT   
+"2006",FORD ,FORD                       ,ESCAPE XLS
+"2007",SATU ,SATURN                     ,VUE HYBRID
+"2007",SATU ,SNOWEX                     ,VUE HYBRID
+"2002",CADI ,CADILLAC                   ,DEVILLE   
+"1997",TOYT ,TOYOTA                     ,"4RUNNER SR"
+"2013",DODG ,DODGE                      ,GRAND CARA
